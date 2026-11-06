@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Доска публикаций — Лабораторная работа № 3</title>
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<main class="container">
+<header><p class="eyebrow">Лабораторная работа № 3 выполнила Кукунова Мария </p><h1>Доска публикаций</h1><p>Загружайте записи и создавайте свои публикации.</p></header>
+<div class="layout">
+<section class="panel" aria-labelledby="posts-heading">
+<div class="section-header"><h2 id="posts-heading">Публикации</h2><button id="load-button" type="button">Загрузить публикации</button></div>
+<p id="load-message" class="message" role="status" aria-live="polite"></p>
+<div id="posts-list"><p class="empty">Нажмите «Загрузить публикации», чтобы увидеть записи.</p></div>
+</section>
+<section class="panel" aria-labelledby="form-heading">
+<h2 id="form-heading">Новая публикация</h2>
+<form id="post-form" novalidate>
+<label for="title">Заголовок</label><input id="title" name="title" type="text" required aria-describedby="form-message">
+<label for="body">Текст</label><textarea id="body" name="body" rows="7" required aria-describedby="form-message"></textarea>
+<button id="submit-button" type="submit">Создать публикацию</button>
+</form>
+<p id="form-message" class="message" role="status" aria-live="polite"></p>
+<div id="created-post" aria-live="polite"></div>
+<p class="note">JSONPlaceholder имитирует создание: новые записи не сохраняются на сервере постоянно.</p>
+</section>
+</div>
+<footer>HTML · CSS · JavaScript · fetch · async/await</footer>
+</main>
+</body>
+</html>
